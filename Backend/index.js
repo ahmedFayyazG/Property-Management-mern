@@ -10,7 +10,7 @@ const connectDB = require("./Config/db");
 const LandlordRoutes = require("./Routes/landlord");
 const ManagementRoutes = require("./Routes/managment");
 const AuthRoutes = require("./Routes/auth");
-
+const TanetRoutes = require("./Routes/tanet");
 // Body parser
 app.use(express.json());
 
@@ -28,6 +28,7 @@ app.use(cors());
 app.use("/api/v1", LandlordRoutes);
 app.use("/api/v1", ManagementRoutes);
 app.use("/api/v1", AuthRoutes);
+app.use("/api/v1", TanetRoutes);
 
 //Connect DB
 connectDB();
